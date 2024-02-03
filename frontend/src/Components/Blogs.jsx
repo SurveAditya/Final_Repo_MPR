@@ -19,6 +19,7 @@ function Blogs() {
     }
     fetchBlogs();
   }, []);
+  
 
   return (
     <div>
@@ -61,7 +62,7 @@ function Blogs() {
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {blogs.map((blog) => (
               <article
-                aria-label={`${blog.title} by ${blog.author}`}
+                aria-label={`${blog.title} by ${blog.authroId}`}
                 onClick={() => {
                   navigate("/blog", { state: blog });
                 }}
@@ -99,8 +100,11 @@ function Blogs() {
                         {blog.authors}
                       </a>
                     </p>
-                    <p className="text-gray-600">{"Author"}</p>
+                 
                   </div>
+                
+                  
+              
                 </div>
               </article>
             ))}

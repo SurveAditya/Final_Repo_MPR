@@ -11,14 +11,14 @@ const getBlogs = async () => {
   }
 };
 
-const createBlog = async (title, text, tags, author) => {
+const createBlog = async (title, text, tags, author,url,blockurl) => {
   try {
     const response = await axios.post("/api/blogs", {
       title,
       text,
       timestamp: new Date().toISOString(),
-      url: "https://example.com",
-      authorImage: "https://example.com/author.jpg",
+      url: blockurl,
+      authorImage: url,
       authorId: "65a846db87cfed9b8afecc6c",
       comments: [],
       authors: author,

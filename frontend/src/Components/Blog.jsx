@@ -112,7 +112,8 @@ function Blog() {
           <TextToSpeech text={location.state.text} />
         </div>
 
-        <div className="text-black">
+        <div className="text-black space-y-10">
+          <div>
           <p
             className="text-justify"
             value="msg"
@@ -121,6 +122,27 @@ function Blog() {
           >
             {location.state.text}
           </p>
+         
+
+          </div>
+
+      
+<div>
+  
+<a href = {location.state.url} target="_black"> <p className="text-gray-600">{"Blockchain URL "}</p></a> 
+
+</div>
+
+          <p className="text-gray-600">{"Image"}</p>
+          <img
+          src={location.state.authorImage}
+          className="rounded  shadow-lg w-64 h-64 object-cover"
+            alt="profile-image"
+          />
+
+
+          
+          
         </div>
       </article>
 
@@ -246,6 +268,7 @@ function Blog() {
                 </div>
               </footer>
               <p className="text-gray-500 ">{comment.text}</p>
+  
             </article>
           ))}
         </div>
