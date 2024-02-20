@@ -415,4 +415,6 @@ app.post("/jobs/apply", async (req, res) => {
   }
 });
 
+console.log("The job has been applied");
+
 module.exports = app;
